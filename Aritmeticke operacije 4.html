@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<title>Aritmeticke operacije</title>
+<body>
+        <div class="input_num">
+           <input type="text" id="num1" value="">
+           <br>
+           <br>
+           <input type="text" id="num2" value="">
+           <br>
+        </div>
+           <br>
+        <label for="operators">Izaberi jedan operator:</label>
+           <select id="operators" size="4" multiple>
+               <option value="+">+</option>
+               <option value="-">-</option>
+               <option value="/">/</option>
+               <option value="*">*</option>
+           </select>
+           <br>
+        <input type="button" value="=" onclick="calc()">
+        <input type="text" id="result">
+<script>
+             function calc() 
+             {
+                 var num1 = parseFloat(document.getElementById("num1").value);
+                 var num2 = parseFloat(document.getElementById("num2").value);
+                 var oper = document.getElementById("operators").value;
+
+                 if (oper === "+")
+                 {
+                    document.getElementById("result").value = num1+num2;
+                 }
+
+                   if (oper === '-')
+                 {
+                    document.getElementById("result").value = num1-num2;
+                 }
+
+                 if (oper === '/')
+                 {
+                    document.getElementById('result').value = num1/num2;
+                 }
+
+                 if (oper === '*')
+                 {
+                    document.getElementById('result').value = num1*num2;
+                 }  
+
+             }
+         </script>  
